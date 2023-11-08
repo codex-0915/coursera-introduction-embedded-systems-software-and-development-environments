@@ -39,5 +39,16 @@
  *
  *******************************************************************************/
 
+void print_array(unsigned char *array)
+{
+	printf("--------------Printing all data---------------\n");
+	printf("[");
+	for (int loop_count = 0; loop_count < SIZE; loop_count++)
+	{
+		printf(" %d ", array[loop_count]);
+	}
+	printf("]\n");
+	printf("-------------------------------------------\n\n");
+}
 
 /*** End of File ***/

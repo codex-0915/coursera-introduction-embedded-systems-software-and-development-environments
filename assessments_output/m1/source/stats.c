@@ -35,14 +35,24 @@
 
 int main()
 {
-    unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
-                              114, 88,   45,  76, 123,  87,  25,  23,
-                              200, 122, 150, 90,   92,  87, 177, 244,
-                              201,   6,  12,  60,   8,   2,   5,  67,
-                                7,  87, 250, 230,  99,   3, 100,  90};
+	unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
+							114, 88,   45,  76, 123,  87,  25,  23,
+							200, 122, 150, 90,   92,  87, 177, 244,
+							201,   6,  12,  60,   8,   2,   5,  67,
+								7,  87, 250, 230,  99,   3, 100,  90};
 
-    
-    return 0;
+	/* Initialize variable declarations */
+	unsigned int minimum = 0;
+	unsigned int maximum = 0;
+	float mean = 0;
+	unsigned int median = 0;
+
+	/* Statistics and Printing Functions */
+	print_array(&test);
+
+
+
+	return 0;
 }
 
 /*** End of File ***/
