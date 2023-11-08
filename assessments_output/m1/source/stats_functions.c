@@ -51,4 +51,32 @@ void print_array(unsigned char *array)
 	printf("-------------------------------------------\n\n");
 }
 
+/********************************************************************************
+ * Function:
+ *
+ * Description:
+ * 
+ * Parameters:
+ * 
+ * Return:
+ *
+ *******************************************************************************/
+
+float find_mean(unsigned char *array, int counter)
+{
+	/* Initialize variables */
+	int sum = 0;
+	float mean = 0;
+
+	for (int loop_count = 0; loop_count < counter; loop_count++)
+	{
+		sum += array[loop_count];
+	}
+
+	/* Calculate for the array's mean */
+	mean = sum / SIZE;
+
+	return mean;
+}
+
 /*** End of File ***/

@@ -49,6 +49,8 @@ int main()
 
 	/* Statistics and Printing Functions */
 	print_array(&test);
+	mean = find_mean(&test, SIZE);
+
 
 
 

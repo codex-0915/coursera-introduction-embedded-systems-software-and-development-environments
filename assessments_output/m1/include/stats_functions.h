@@ -40,6 +40,7 @@
 /********************************************************************************/
 
 void print_array(unsigned char *array);
+float find_mean(unsigned char *array, int counter);
 
 
 
