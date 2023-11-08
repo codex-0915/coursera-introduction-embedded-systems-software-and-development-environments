@@ -41,14 +41,13 @@
 
 void print_array(unsigned char *array, int counter)
 {
-	printf("--------------Printing all data---------------\n");
+	printf("Printing all data...\n");
 	printf("[");
 	for (int loop_count = 0; loop_count < counter; loop_count++)
 	{
 		printf(" %d ", array[loop_count]);
 	}
-	printf("]\n");
-	printf("-------------------------------------------\n\n");
+	printf("]\n\n");
 }
 
 /********************************************************************************
@@ -74,9 +73,47 @@ float find_mean(unsigned char *array, int counter)
 	}
 
 	/* Calculate for the array's mean */
-	mean = sum / SIZE;
+	mean = sum / ((float)SIZE);
 
 	return mean;
+}
+
+/********************************************************************************
+ * Function:
+ *
+ * Description:
+ * 
+ * Parameters:
+ * 
+ * Return:
+ *
+ *******************************************************************************/
+
+void sort_array(unsigned char *array, int counter)
+{
+	/* Initialize variables */
+	int flag = 0; 
+	unsigned char temp_val = 0;
+
+	do {
+		flag = 0; // set flag to default at every new 'do' operation
+		for (int loop_counter = 0; loop_counter < counter; loop_counter++){
+			if (array[loop_counter] > array[loop_counter + 1] 
+				|| array[loop_counter] == array[loop_counter + 1])
+			{
+				continue;
+			}
+			else if (array[loop_counter] < array[loop_counter + 1])
+			{
+				temp_val = array[loop_counter];
+				array[loop_counter] = array[loop_counter + 1];
+				array[loop_counter + 1] = temp_val;
+
+				flag = 1; 
+			}
+		}
+	}
+	while (flag == 1); 
 }
 
 /*** End of File ***/

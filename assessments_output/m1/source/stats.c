@@ -48,9 +48,12 @@ int main()
 	unsigned int median = 0;
 
 	/* Statistics and Printing Functions */
+	printf("Printing the array before sorting...\n");
+	print_array(&test, SIZE);
+	printf("Printing the array after sorting...\n");
+	sort_array(&test, SIZE);
 	print_array(&test, SIZE);
 	mean = find_mean(&test, SIZE);
-
 
 
 
