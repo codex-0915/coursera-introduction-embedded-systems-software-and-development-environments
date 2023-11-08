@@ -48,7 +48,7 @@ int main()
 	unsigned int median = 0;
 
 	/* Statistics and Printing Functions */
-	print_array(&test);
+	print_array(&test, SIZE);
 	mean = find_mean(&test, SIZE);
 
 

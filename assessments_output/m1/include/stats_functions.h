@@ -39,7 +39,7 @@
 /************************************* Prototypes *******************************/
 /********************************************************************************/
 
-void print_array(unsigned char *array);
+void print_array(unsigned char *array, int counter);
 float find_mean(unsigned char *array, int counter);
 
 

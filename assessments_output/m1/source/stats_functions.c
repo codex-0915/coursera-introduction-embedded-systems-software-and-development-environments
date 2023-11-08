@@ -39,11 +39,11 @@
  *
  *******************************************************************************/
 
-void print_array(unsigned char *array)
+void print_array(unsigned char *array, int counter)
 {
 	printf("--------------Printing all data---------------\n");
 	printf("[");
-	for (int loop_count = 0; loop_count < SIZE; loop_count++)
+	for (int loop_count = 0; loop_count < counter; loop_count++)
 	{
 		printf(" %d ", array[loop_count]);
 	}
