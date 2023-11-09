@@ -61,6 +61,27 @@ void print_array(unsigned char *array, int counter)
  *
  *******************************************************************************/
 
+void print_statistics(unsigned int minimum, unsigned int maximum, 
+						float mean, float median)
+{
+	printf("Printing array's statistics...\n");
+	printf("Minimum: %d\n", minimum);
+	printf("Maximum: %d\n", maximum);
+	printf("Mean: %f\n", mean);
+	printf("Median: %f\n\n", median);
+}
+
+/********************************************************************************
+ * Function:
+ *
+ * Description:
+ * 
+ * Parameters:
+ * 
+ * Return:
+ *
+ *******************************************************************************/
+
 float find_median(unsigned char *array, int element_count)
 {
 	float median = 0;

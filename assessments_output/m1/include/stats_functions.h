@@ -41,6 +41,8 @@
 /********************************************************************************/
 
 void print_array(unsigned char *array, int counter);
+void print_statistics(unsigned int minimum, unsigned int maximum, 
+                        float mean, float median);
 float find_median(unsigned char *array, int element_count);
 float find_mean(unsigned char *array, int counter);
 unsigned int find_maximum(unsigned char *array, int element_count);

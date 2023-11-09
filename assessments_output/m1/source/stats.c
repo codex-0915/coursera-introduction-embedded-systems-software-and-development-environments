@@ -57,6 +57,7 @@ int main()
 	median = find_median(&test, SIZE);
 	maximum = find_maximum(&test, SIZE);
 	minimum = find_minimum(&test, SIZE);
+	print_statistics(minimum, maximum, mean, median);
 
 	return 0;
 }
