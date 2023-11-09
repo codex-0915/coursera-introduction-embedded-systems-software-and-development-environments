@@ -29,13 +29,39 @@
 /********************************************************************************/
 
 /********************************************************************************
- * Function:
+ * Function: 		print_statistics()
  *
- * Description:
+ * Description:		Prints the statistics of an array including 
+ * 					minimum, maximum, mean, and median
  * 
- * Parameters:
+ * Parameters:		minimum			Minimum element from the array
+ * 					minimum			Maximum element from the array
+ * 					mean			Mean of the array
+ * 					median			Median of the array
  * 
- * Return:
+ * Return:			void
+ *
+ *******************************************************************************/
+
+void print_statistics(unsigned int minimum, unsigned int maximum, 
+						float mean, float median)
+{
+	printf("Printing array's statistics...\n");
+	printf("Minimum: %d\n", minimum);
+	printf("Maximum: %d\n", maximum);
+	printf("Mean: %f\n", mean);
+	printf("Median: %f\n\n", median);
+}
+
+/********************************************************************************
+ * Function: 		print_array()
+ *
+ * Description:		Prints the array to the screen
+ * 
+ * Parameters:		array			Array that serve as the dataset
+ * 					counter			Length of the array
+ * 
+ * Return:			void
  *
  *******************************************************************************/
 
@@ -51,34 +77,14 @@ void print_array(unsigned char *array, int counter)
 }
 
 /********************************************************************************
- * Function:
+ * Function: 		find_median()
  *
- * Description:
+ * Description:		Find the median of the array
  * 
- * Parameters:
+ * Parameters:		array				Array that serve as the dataset
+ * 					element_count		Length of the array
  * 
- * Return:
- *
- *******************************************************************************/
-
-void print_statistics(unsigned int minimum, unsigned int maximum, 
-						float mean, float median)
-{
-	printf("Printing array's statistics...\n");
-	printf("Minimum: %d\n", minimum);
-	printf("Maximum: %d\n", maximum);
-	printf("Mean: %f\n", mean);
-	printf("Median: %f\n\n", median);
-}
-
-/********************************************************************************
- * Function:
- *
- * Description:
- * 
- * Parameters:
- * 
- * Return:
+ * Return:			median				Median of the array
  *
  *******************************************************************************/
 
@@ -103,13 +109,14 @@ float find_median(unsigned char *array, int element_count)
 }
 
 /********************************************************************************
- * Function:
+ * Function: 		find_mean()
  *
- * Description:
+ * Description:		Find the mean of the array
  * 
- * Parameters:
+ * Parameters:		array				Array that serve as the dataset
+ * 					counter				Length of the array
  * 
- * Return:
+ * Return:			mean				Mean of the array
  *
  *******************************************************************************/
 
@@ -131,45 +138,50 @@ float find_mean(unsigned char *array, int counter)
 }
 
 /********************************************************************************
- * Function:
+ * Function: 		find_maximum()
  *
- * Description:
+ * Description:		Find the maximum value in the array
  * 
- * Parameters:
+ * Parameters:		array				Array that serve as the dataset
+ * 					element_count		Length of the array
  * 
- * Return:
+ * Return:			max_val				Maximum value from the array
  *
  *******************************************************************************/
 
 unsigned int find_maximum(unsigned char *array, int element_count)
 {
-	return array[INITIAL_INDEX];
+	unsigned int max_val = array[INITIAL_INDEX];
+	return max_val;
 }
 
 /********************************************************************************
- * Function:
+ * Function: 		find_minimum()
  *
- * Description:
+ * Description:		Find the minimum value in the array
  * 
- * Parameters:
+ * Parameters:		array				Array that serve as the dataset
+ * 					element_count		Length of the array
  * 
- * Return:
+ * Return:			min_val				Minimum value from the array
  *
  *******************************************************************************/
 
 unsigned int find_minimum(unsigned char *array, int element_count)
 {
-	return array[element_count - NEXT_INDEX];
+	unsigned int min_val = array[element_count - NEXT_INDEX];
+	return min_val;
 }
 
 /********************************************************************************
- * Function:
+ * Function: 		sort_array()
  *
- * Description:
+ * Description:		Sorts the array from largest to smallest
  * 
- * Parameters:
+ * Parameters:		array			Array that serve as the dataset
+ * 					counter			Length of the array
  * 
- * Return:
+ * Return:			void
  *
  *******************************************************************************/
 
