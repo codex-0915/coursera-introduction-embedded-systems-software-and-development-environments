@@ -61,6 +61,35 @@ void print_array(unsigned char *array, int counter)
  *
  *******************************************************************************/
 
+float find_median(unsigned char *array, int element_count)
+{
+	float median = 0;
+
+	if (0 == element_count % 2)
+	{
+		median = ((array[element_count / 2]) + (array[(element_count / 2) + 1]) / 2);
+	}
+
+	else
+	{
+		median = array[(element_count + 1) / 2];
+	}
+
+	return median;
+
+}
+
+/********************************************************************************
+ * Function:
+ *
+ * Description:
+ * 
+ * Parameters:
+ * 
+ * Return:
+ *
+ *******************************************************************************/
+
 float find_mean(unsigned char *array, int counter)
 {
 	/* Initialize variables */

@@ -45,7 +45,7 @@ int main()
 	unsigned int minimum = 0;
 	unsigned int maximum = 0;
 	float mean = 0;
-	unsigned int median = 0;
+	float median = 0;
 
 	/* Statistics and Printing Functions */
 	printf("Printing the array before sorting...\n");
@@ -54,7 +54,7 @@ int main()
 	sort_array(&test, SIZE);
 	print_array(&test, SIZE);
 	mean = find_mean(&test, SIZE);
-
+	median = find_median(&test, SIZE);
 
 
 	return 0;

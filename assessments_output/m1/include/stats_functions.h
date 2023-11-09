@@ -40,8 +40,8 @@
 /********************************************************************************/
 
 void print_array(unsigned char *array, int counter);
+float find_median(unsigned char *array, int element_count);
 float find_mean(unsigned char *array, int counter);
-unsigned int find_median(unsigned char *array, int counter);
 void sort_array(unsigned char *array, int counter);
 
 #endif /* __STATS_FUNCTIONS_H__ */
