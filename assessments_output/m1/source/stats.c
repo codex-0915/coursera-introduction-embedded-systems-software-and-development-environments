@@ -44,8 +44,8 @@ int main()
 	/* Initialize variable declarations */
 	unsigned int minimum = 0;
 	unsigned int maximum = 0;
-	float mean = 0;
-	float median = 0;
+	float mean = 0.00;
+	float median = 0.00;
 
 	/* Statistics and Printing Functions */
 	printf("Printing the array before sorting...\n");

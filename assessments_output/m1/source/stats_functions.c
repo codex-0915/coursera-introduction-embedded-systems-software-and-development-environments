@@ -95,13 +95,13 @@ float find_median(unsigned char *array, int element_count)
 	if (EVEN_REMAINDER == element_count % EVEN_OR_ODD_DIVISOR)
 	{
 		median = ((array[element_count / SPLIT_AT_MIDDLE]) + 
-					(array[(element_count / SPLIT_AT_MIDDLE) + NEXT_INDEX]) 
-					/ SPLIT_AT_MIDDLE);
+					(array[(element_count / SPLIT_AT_MIDDLE) + NEXT_INDEX]))
+					/ SPLIT_AT_MIDDLE;
 	}
 
 	else
 	{
-		median = array[(element_count + 1) / SPLIT_AT_MIDDLE];
+		median = array[(element_count) / SPLIT_AT_MIDDLE];
 	}
 
 	return median;
