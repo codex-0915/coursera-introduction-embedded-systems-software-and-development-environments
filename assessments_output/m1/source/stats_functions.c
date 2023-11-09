@@ -118,6 +118,38 @@ float find_mean(unsigned char *array, int counter)
  *
  *******************************************************************************/
 
+unsigned int find_maximum(unsigned char *array, int element_count)
+{
+	return array[INITIAL_INDEX];
+}
+
+/********************************************************************************
+ * Function:
+ *
+ * Description:
+ * 
+ * Parameters:
+ * 
+ * Return:
+ *
+ *******************************************************************************/
+
+unsigned int find_minimum(unsigned char *array, int element_count)
+{
+	return array[element_count - 1];
+}
+
+/********************************************************************************
+ * Function:
+ *
+ * Description:
+ * 
+ * Parameters:
+ * 
+ * Return:
+ *
+ *******************************************************************************/
+
 void sort_array(unsigned char *array, int counter)
 {
 	/* Initialize variables */

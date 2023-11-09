@@ -55,7 +55,8 @@ int main()
 	print_array(&test, SIZE);
 	mean = find_mean(&test, SIZE);
 	median = find_median(&test, SIZE);
-
+	maximum = find_maximum(&test, SIZE);
+	minimum = find_minimum(&test, SIZE);
 
 	return 0;
 }
