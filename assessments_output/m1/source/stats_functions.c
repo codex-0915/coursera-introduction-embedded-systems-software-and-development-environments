@@ -86,14 +86,16 @@ float find_median(unsigned char *array, int element_count)
 {
 	float median = 0;
 
-	if (0 == element_count % 2)
+	if (EVEN_REMAINDER == element_count % EVEN_OR_ODD_DIVISOR)
 	{
-		median = ((array[element_count / 2]) + (array[(element_count / 2) + 1]) / 2);
+		median = ((array[element_count / SPLIT_AT_MIDDLE]) + 
+					(array[(element_count / SPLIT_AT_MIDDLE) + NEXT_INDEX]) 
+					/ SPLIT_AT_MIDDLE);
 	}
 
 	else
 	{
-		median = array[(element_count + 1) / 2];
+		median = array[(element_count + 1) / SPLIT_AT_MIDDLE];
 	}
 
 	return median;
@@ -157,7 +159,7 @@ unsigned int find_maximum(unsigned char *array, int element_count)
 
 unsigned int find_minimum(unsigned char *array, int element_count)
 {
-	return array[element_count - 1];
+	return array[element_count - NEXT_INDEX];
 }
 
 /********************************************************************************
@@ -180,22 +182,22 @@ void sort_array(unsigned char *array, int counter)
 	do {
 		flag = 0; // set flag to default at every new 'do' operation
 		for (int loop_counter = 0; loop_counter < counter; loop_counter++){
-			if (array[loop_counter] > array[loop_counter + 1] 
-				|| array[loop_counter] == array[loop_counter + 1])
+			if (array[loop_counter] > array[loop_counter + NEXT_INDEX] 
+				|| array[loop_counter] == array[loop_counter + NEXT_INDEX])
 			{
 				continue;
 			}
-			else if (array[loop_counter] < array[loop_counter + 1])
+			else if (array[loop_counter] < array[loop_counter + NEXT_INDEX])
 			{
 				temp_val = array[loop_counter];
-				array[loop_counter] = array[loop_counter + 1];
-				array[loop_counter + 1] = temp_val;
+				array[loop_counter] = array[loop_counter + NEXT_INDEX];
+				array[loop_counter + NEXT_INDEX] = temp_val;
 
-				flag = 1; 
+				flag = CHANGED_FLAG; 
 			}
 		}
 	}
-	while (flag == 1); 
+	while (CHANGED_FLAG == flag); 
 }
 
 /*** End of File ***/

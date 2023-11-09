@@ -35,6 +35,11 @@
 /* Macros */
 #define SIZE (40)  /* Size of the Data Set */
 #define INITIAL_INDEX (0)
+#define EVEN_REMAINDER (0)
+#define EVEN_OR_ODD_DIVISOR (2)
+#define SPLIT_AT_MIDDLE (2)
+#define NEXT_INDEX (1)
+#define CHANGED_FLAG (1)
 
 /********************************************************************************/
 /************************************* Prototypes *******************************/
