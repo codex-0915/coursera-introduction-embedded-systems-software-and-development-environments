@@ -6,8 +6,12 @@
 
 ## Description
 
-**REMINDER: TO RUN THIS PROGRAM ON CONSOLE, SIMPLY TYPE THE COMMAND "_./stats.out_" ON YOUR TERMINAL**
+**REMINDER: TO COMPILE AND RUN THIS PROGRAM ON CONSOLE, SIMPLY TYPE THE COMMAND BELOW ON YOUR TERMINAL**
 
+```
+$  gcc -o stats.out ./source/stats.c ./source/stats_functions.c
+$  ./stats.out
+```
 
 Simple application that performs statistical analytics on a dataset by analyzing an array of unsigned char data items and report analytics on the maximum, minimum, mean, and median of the data set.
 
